@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Expériences - Youssoupha LO</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <style>
+    body {
+      background-color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .card {
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .content-wrapper {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 50px 0;
+    }
+    .navbar{
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        background-color:  rgb(221, 224, 227) !important;
+        color: rgb(26, 195, 175) !important;
+    }
+    .navbar-brand, .nav-link {
+      color: rgb(26, 195, 175) !important;
+    }
+    h2 {
+      color: rgb(26, 195, 175);
+    }
+    footer{
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        background-color: rgb(221, 224, 227) !important;
+        color: rgb(26, 195, 175) !important;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar- sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="experiences.html">Expériences</a></li>
+          <li class="nav-item"><a class="nav-link" href="formations.html">Formations</a></li>
+          <li class="nav-item"><a class="nav-link" href="competences.html">Compétences</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="content-wrapper">
+    <div class="container">
+      <h2 class="text-center mb-5">Expériences Professionnelles</h2>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 justify-content-center">
+        <div class="col animate__animated animate__fadeInUp">
+          <div class="card shadow-lg border-success">
+            <div class="card-body">
+              <h5 class="card-title text-success">HEC Paris - Apprenti Certification Qualité</h5>
+              <p class="card-text">Depuis octobre 2022</p>
+              <p class="card-text">Qualiopi, RS/RNCP, Labellisation Campus France</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col animate__animated animate__fadeInUp animate__delay-1s">
+          <div class="card shadow-lg border-info">
+            <div class="card-body">
+              <h5 class="card-title text-info">UVSQ - Enquêteur ethnographique</h5>
+              <p class="card-text">Mai 2021 - Juin 2021</p>
+              <p class="card-text">Bien-être des habitants et analyse de terrain</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col animate__animated animate__fadeInUp animate__delay-2s">
+          <div class="card shadow-lg border-warning">
+            <div class="card-body">
+              <h5 class="card-title text-warning">ANSD Sénégal - Agent d'enquête</h5>
+              <p class="card-text">Avril 2020 - Septembre 2020</p>
+              <p class="card-text">Enquête démographique sur les revenus des ménages</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col animate__animated animate__fadeInUp animate__delay-3s">
+          <div class="card shadow-lg border-primary">
+            <div class="card-body">
+              <h5 class="card-title text-primary">Municipalité Parcelles Assainies - Assistant Gestion de Projet</h5>
+              <p class="card-text">Février 2018 - Août 2018</p>
+              <p class="card-text">Montage de projet et appui à l’incubateur</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-center  py-4 mt-auto">
+    <p>&copy; 2025 Youssoupha LO | Portfolio professionnel</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

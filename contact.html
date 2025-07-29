@@ -1,0 +1,203 @@
+    
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact - Youssoupha LO</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+
+/* .navbar{
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        background-color: aliceblue !important;
+        color: rgb(26, 195, 175) !important;
+    }
+    .navbar-brand, .nav-link {
+      color: rgb(26, 195, 175) !important;
+    }
+    h2, h3{
+      color: rgb(26, 195, 175);
+    } */
+
+    .navbar{
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        background-color:  rgb(221, 224, 227) !important;
+        color: rgb(26, 195, 175) !important;
+    }
+    .navbar-brand, .nav-link {
+      color: rgb(26, 195, 175) !important;
+    }
+    h2 {
+      color: rgb(26, 195, 175);
+    }
+    footer{
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        background-color: rgb(221, 224, 227) !important;
+        color: rgb(26, 195, 175) !important;
+    }
+    main {
+      flex: 1 0 auto;
+    }
+    /* footer {
+      flex-shrink: 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        background-color: aliceblue !important;
+        color: rgb(26, 195, 175) !important;
+    } */
+    body {
+      background: #f8f9fa;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .card-animated {
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .card-form {
+      border: 2px solid  rgb(26, 195, 175);
+      box-shadow: 0 0 20px rgba(0, 123, 255, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .card-form:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 30px rgba(0, 123, 255, 0.4);
+    }
+
+    .card-info {
+      border: 2px solid #6c757d;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .card-info:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 25px rgba(108, 117, 125, 0.3);
+      border: 2px solid rgb(26, 195, 175);
+    }
+
+    footer {
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+
+    form input,
+form textarea {
+  border: 2px solid #dee2e6;
+  transition: all 0.3s ease;
+}
+form input:focus,
+form textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 10px rgba(0,123,255,0.25);
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+.fas {
+  color: rgb(26, 195, 175) !important;
+}
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Portfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+        <li class="nav-item"><a class="nav-link" href="experiences.html">Expériences</a></li>
+        <li class="nav-item"><a class="nav-link" href="formations.html">Formations</a></li>
+        <li class="nav-item"><a class="nav-link" href="competences.html">Compétences</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Me Contacter</h2>
+
+    <!-- Formulaire dans une card animée -->
+    <div class="row justify-content-center mb-5">
+      <div class="col-md-10">
+        <div class="card card-form card-animated p-4">
+          <form>
+            <div class="mb-3">
+              <label for="nom" class="form-label">Nom</label>
+              <input type="text" class="form-control" id="nom" placeholder="Votre nom">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Votre email">
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="5" placeholder="Votre message..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-info justify-content-center rounded-5 p-2">Envoyer</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Infos personnelles dans des petites cards -->
+    <div class="row text-center justify-content-center gy-4">
+      <div class="col-10 col-sm-6 col-md-3">
+        <div class="card card-info border-danger card-animated p-3">
+          <i class="fas fa-envelope fa-2x mb-2 "></i>
+          <p class="mb-0">youssouphalo92@gmail.com</p>
+        </div>
+      </div>
+      <div class="col-10 col-sm-6 col-md-3">
+        <div class="card card-info card-animated border-success  p-3">
+          <i class="fas fa-phone fa-2x mb-2 "></i>
+          <p class="mb-0">0605561806</p>
+        </div>
+      </div>
+      <div class="col-10 col-sm-6 col-md-3">
+        <div class="card card-info  border-info card-animated p-3">
+          <i class="fas fa-location-dot fa-2x mb-2"></i>
+          <p class="mb-0">78280 Guyancourt</p>
+        </div>
+      </div>
+      <div class="col-10 col-sm-6 col-md-3">
+        <div class="card card-info border-warning card-animated p-3">
+          <i class=" fas fab fa-linkedin fa-2x mb-2"></i>
+          <a href="https://www.linkedin.com/in/Youssoupha%20LO" target="_blank" class="text-decoration-none text-black">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="text-center py-4 mt-5">
+  <p>&copy; 2025 Youssoupha LO | Portfolio professionnel</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

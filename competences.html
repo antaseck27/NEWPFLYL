@@ -1,0 +1,293 @@
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Compétences - Youssoupha LO</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    /* Animation fadeInUp */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translate3d(0, 40px, 0);
+      }
+      to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+    .fade-in-up {
+      animation: fadeInUp 0.6s ease forwards;
+      opacity: 0;
+    }
+
+    /* Cards compétences avec border colorée et ombre légère */
+    .competence-card {
+      border: 3px solid #6c757d; /* couleur grise par défaut */
+      border-radius: 0.75rem;
+      background-color: #fff;
+      padding: 1.5rem;
+      height: 100%;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+      cursor: default;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .competence-card:hover {
+      border-color: #0dfd21; /* bleu bootstrap */
+      box-shadow: 0 8px 20px rgba(13,110,253,0.3);
+      transform: translateY(-6px);
+      cursor: pointer;
+    }
+
+    /* Cercles langues & qualités */
+    .circle-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+    .circle {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background-color: aliceblue;
+      border: 4px solid #aab1b8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 1rem;
+      font-weight: 600;
+      color: #495057;
+      user-select: none;
+      transition:
+        background-color 0.4s ease,
+        border-color 0.4s ease,
+        color 0.4s ease,
+        transform 0.3s ease;
+      cursor: pointer;
+      min-width: 120px;
+    }
+    .circle:hover {
+      background-color:  rgb(26, 195, 175);
+      border-color:  rgb(26, 195, 175);
+      color: white;
+      transform: scale(1.05);
+    }
+    .circle.active {
+      background-color:gray;
+      border-color:gray;
+      color: white;
+      transform: scale(1.1);
+    }
+
+    /* Texte dans cercles */
+    .circle .title {
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
+    }
+    .circle .desc {
+      font-size: 0.85rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 576px) {
+      .circle {
+        width: 100px;
+        height: 100px;
+        min-width: 100px;
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Sticky footer */
+    body, html {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+    }
+    /* .navbar{
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        background-color: aliceblue !important;
+        color: rgb(26, 195, 175) !important;
+    }
+    .navbar-brand, .nav-link {
+      color: rgb(26, 195, 175) !important;
+    } */
+    h2, h3{
+      color: rgb(26, 195, 175);
+    }
+    main {
+      flex: 1 0 auto;
+    }
+
+    .navbar{
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        background-color:  rgb(221, 224, 227) !important;
+        color: rgb(26, 195, 175) !important;
+    }
+    .navbar-brand, .nav-link {
+      color: rgb(26, 195, 175) !important;
+    }
+    h2 {
+      color: rgb(26, 195, 175);
+    }
+    footer{
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        background-color: rgb(221, 224, 227) !important;
+        color: rgb(26, 195, 175) !important;
+    }
+    /* footer {
+      flex-shrink: 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        background-color: aliceblue !important;
+        color: rgb(26, 195, 175) !important;
+    } */
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Portfolio</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="experiences.html">Expériences</a></li>
+          <li class="nav-item"><a class="nav-link" href="formations.html">Formations</a></li>
+          <li class="nav-item"><a class="nav-link active" href="competences.html">Compétences</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="py-5 container">
+      <h2 class="text-center mb-5">Compétences</h2>
+      <div class="row g-4">
+        <!-- Cards avec bordure colorée -->
+        <div class="col-md-6 col-lg-4 fade-in-up" style="animation-delay: 0.1s;">
+          <div class="competence-card border-success">
+            <h5>Management QHSE</h5>
+            <p>Gestion de la qualité, hygiène, sécurité et environnement, pilotage de systèmes QHSE.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 fade-in-up" style="animation-delay: 0.3s;">
+          <div class="competence-card border-info">
+            <h5>Audits Qualiopi</h5>
+            <p>Réalisation et préparation aux audits de certification Qualiopi.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 fade-in-up" style="animation-delay: 0.5s;">
+          <div class="competence-card border-warning">
+            <h5>Normes ISO 9001, 14001, 45001</h5>
+            <p>Connaissance approfondie des standards ISO pour management qualité et environnement.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 fade-in-up" style="animation-delay: 0.7s;">
+          <div class="competence-card border-primary">
+            <h5>Certifications RS/RNCP</h5>
+            <p>Maîtrise des démarches de certification et reconnaissance des compétences.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 fade-in-up" style="animation-delay: 0.9s;">
+          <div class="competence-card">
+            <h5>Analyse quantitative & environnementale</h5>
+            <p>Utilisation avancée des outils STATA, R, MATLAB, Scilab pour l’analyse de données.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 fade-in-up" style="animation-delay: 1.1s;">
+          <div class="competence-card border-danger">
+            <h5>Outils informatiques</h5>
+            <p>Maîtrise des logiciels Word, Excel, PowerPoint, gestion de projet informatique.</p>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-5" />
+
+      <h3 class="text-center mb-4">Langues & Qualités personnelles</h3>
+      <div class="circle-container">
+        <!-- Cercle langue 1 -->
+        <div class="circle" tabindex="0" role="button" aria-pressed="false" data-type="langue">
+          <div class="title">Français</div>
+          <div class="desc"></div>
+        </div>
+        <!-- Cercle langue 2 -->
+        <div class="circle" tabindex="0" role="button" aria-pressed="false" data-type="langue">
+          <div class="title">Anglais</div>
+          <div class="desc"></div>
+        </div>
+        <!-- Cercle qualité 1 -->
+        <div class="circle" tabindex="0" role="button" aria-pressed="false" data-type="qualite">
+          <div class="title">Rigueur</div>
+          <div class="desc"></div>
+        </div>
+        <!-- Cercle qualité 2 -->
+        <div class="circle" tabindex="0" role="button" aria-pressed="false" data-type="qualite">
+          <div class="title">Bon relationnel</div>
+          <div class="desc"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center py-4">
+    <p class="mb-0">&copy; 2025 Youssoupha LO | Portfolio professionnel</p>
+  </footer>
+
+  <script>
+    // Gestion des clics / touches clavier sur cercles
+    const circles = document.querySelectorAll('.circle');
+    circles.forEach(circle => {
+      circle.addEventListener('click', () => toggleCircle(circle));
+      circle.addEventListener('keydown', e => {
+        if(e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleCircle(circle);
+        }
+      });
+    });
+
+    function toggleCircle(circle) {
+      const isActive = circle.classList.contains('active');
+      if (isActive) {
+        // Désactive
+        circle.classList.remove('active');
+        circle.setAttribute('aria-pressed', 'false');
+        // On peut aussi changer le texte si tu veux
+        // ici on laisse tel quel
+      } else {
+        // Active
+        circle.classList.add('active');
+        circle.setAttribute('aria-pressed', 'true');
+      }
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

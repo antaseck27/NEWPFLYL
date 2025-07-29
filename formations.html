@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formations - Youssoupha LO</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    /* ... garde tout ton style précédent, et ajoute/modifie ceci : */
+
+.card-timeline {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeUp 0.6s forwards ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item:nth-child(1) .card-timeline {
+  animation-delay: 0.2s;
+}
+.timeline-item:nth-child(2) .card-timeline {
+  animation-delay: 0.4s;
+}
+.timeline-item:nth-child(3) .card-timeline {
+  animation-delay: 0.6s;
+}
+.timeline-item:nth-child(4) .card-timeline {
+  animation-delay: 0.8s;
+}
+.timeline-item:nth-child(5) .card-timeline {
+  animation-delay: 1s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-timeline:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* Amélioration des cercles */
+.timeline-item::before {
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+  }
+}
+
+    /* body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    section {
+      flex: 1;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      color: #343a40;
+      margin-bottom: 60px;
+    }
+      
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      margin: 0 auto;
+      padding: 0;
+      max-width: 900px;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background: #5d8bbd;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      padding: 20px 40px;
+      position: relative;
+      width: 50%;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      right: -10px;
+      background: #fff;
+      border: 4px solid rgb(26, 195, 175);
+      top: 20px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .timeline-item:nth-child(odd) {
+      left: 0;
+      text-align: right;
+    }
+
+    .timeline-item:nth-child(even) {
+      left: 50%;
+      text-align: left;
+    }
+
+    .timeline-item:nth-child(odd)::before {
+      left: auto;
+      right: -10px;
+    }
+
+    .timeline-item:nth-child(even)::before {
+      left: -10px;
+      right: auto;
+    }
+
+    .card-timeline {
+      background: rgb(229, 227, 227);
+      padding: 20px;
+      border-radius: 10px;
+      position: relative;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      animation: fadeInUp 0.7s ease both;
+      transition: all 0.3s ease;
+    }
+
+    .card-timeline:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .card-timeline h5 {
+      font-size: 1.1rem;
+      color: rgb(26, 195, 175);
+      margin-bottom: 10px;
+    }
+
+    .card-timeline p {
+      margin: 0;
+    }
+
+    .card-timeline strong {
+      color: #343a40;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .timeline::after {
+        left: 20px;
+      }
+
+      .timeline-item {
+        width: 100%;
+        padding-left: 60px;
+        padding-right: 20px;
+        text-align: left;
+      }
+
+      .timeline-item::before {
+        left: 20px;
+      }
+
+      .timeline-item:nth-child(odd),
+      .timeline-item:nth-child(even) {
+        left: 0;
+      }
+    }
+
+   
+    .navbar{
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        background-color:  rgb(221, 224, 227) !important;
+        color: rgb(26, 195, 175) !important;
+    }
+    .navbar-brand, .nav-link {
+      color: rgb(26, 195, 175) !important;
+    }
+    h2 {
+      color: rgb(26, 195, 175);
+    }
+    footer{
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        background-color: rgb(221, 224, 227) !important;
+        color: rgb(26, 195, 175) !important;
+        padding: 20px;
+    }
+    */
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="experiences.html">Expériences</a></li>
+          <li class="nav-item"><a class="nav-link active" href="formations.html">Formations</a></li>
+          <li class="nav-item"><a class="nav-link" href="competences.html">Compétences</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center">Diplômes et Formations</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="card-timeline">
+            <h5>2022 - 2024</h5>
+            <p><strong>Master Manager de la qualité et de la performance durable</strong><br>Sup de V ESSYM, Rambouillet</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="card-timeline">
+            <h5>2020 - 2021</h5>
+            <p><strong>Maîtrise Sciences de la santé de l’environnement et des territoires soutenables</strong><br>Université de Versailles Saint-Quentin-en-Yvelines (UVSQ)</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="card-timeline">
+            <h5>2018 - 2020</h5>
+            <p><strong>Master Analyse économique et quantitative</strong><br>Université Gaston Berger, Sénégal</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="card-timeline">
+            <h5>2013 - 2017</h5>
+            <p><strong>Licence Économie appliquée</strong><br>Université Gaston Berger, Sénégal</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="card-timeline">
+            <h5>2012 - 2013</h5>
+            <p><strong>Baccalauréat scientifique série S2</strong><br>Lycée Moderne de Dakar</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center">
+    <p>&copy; 2025 Youssoupha LO | Portfolio professionnel</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
